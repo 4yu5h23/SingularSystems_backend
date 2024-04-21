@@ -5,6 +5,7 @@ from rest_framework import routers
 from app0 import views
 from warranty import views as views2
 from accounts import views as views3
+from api import views as views4
 
 
 admin.site.site_header = "SingularSystems Admin"
@@ -26,8 +27,12 @@ router.register(r'case', views.caseView, 'case')
 
 router.register(r'contact_us', views2.contact_usView, 'contact_us')
 
+router.resiter(r'recommend', views4.getinput, 'recommend')
+
+
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('api/', include(router.urls)),
     path('accounts/', include('accounts.urls')),
+    path('recommend/', views4.getinput)
 ]
