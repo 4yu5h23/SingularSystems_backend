@@ -96,7 +96,7 @@ def recommend_items_for_cpu_and_motherboard_and_gpu_and_ram(input_cpu, input_mot
 
 
 @api_view(['POST'])
-def returnmotherboard(request):
+def returnMotherboard(request):
     cpu = request.data['cpu']
     mb= recommend_items_for_cpu(cpu)
     # return cpu
