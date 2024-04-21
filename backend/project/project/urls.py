@@ -27,12 +27,15 @@ router.register(r'case', views.caseView, 'case')
 
 router.register(r'contact_us', views2.contact_usView, 'contact_us')
 
-router.resiter(r'recommend', views4.getinput, 'recommend')
+# router.register(r'recommend', views4.api_view, 'recommend')
 
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('api/', include(router.urls)),
     path('accounts/', include('accounts.urls')),
-    path('recommend/', views4.getinput)
+    path('recommendMB/', views4.returnmotherboard),
+    path('recommendGPU/', views4.returnGPU),
+    path('recommendRAM/', views4.returnRAM),
+    path('recommendPSU/', views4.returnPSU), 
 ]
