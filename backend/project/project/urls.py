@@ -31,11 +31,11 @@ router.register(r'contact_us', views2.contact_usView, 'contact_us')
 
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
-    path('api/', include(router.urls)),
-    path('accounts/', include('accounts.urls')),
-    path('recommendMB/', views4.returnMotherboard),
-    path('recommendGPU/', views4.returnGPU),
-    path('recommendRAM/', views4.returnRAM),
-    path('recommendPSU/', views4.returnPSU), 
+    path('admin/', admin.site.urls),   
+    path('api/', include(router.urls)),     
+    path('accounts/', include('accounts.urls')),      
+    path('recommendMB/', views4.returnMotherboard),      
+    path('recommendGPU/', views4.returnGPU),      
+    path('recommendRAM/', views4.returnRAM),     
+    path('recommendPSU/', views4.returnPSU),   
 ]
